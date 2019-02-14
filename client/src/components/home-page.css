@@ -1,0 +1,15 @@
+.main-container {
+  padding: 2% 10%;
+  background-color: #dcdde1;
+  height: 100vh;
+}
+
+.margin-left {
+  margin-left: 20px;
+}
+
+.api-main-box {
+  padding: 4% 5%;
+  background: #ffffff;
+  border-radius: 25px;
+}
