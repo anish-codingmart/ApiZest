@@ -17,7 +17,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 // Use Axios Config
 useAxiosConfig();
-test();
 let resultAll = [];
 
 app.post("/testapi", async (req, res) => {
@@ -29,20 +28,20 @@ app.post("/testapi", async (req, res) => {
   resultAll = [];
 });
 
-async function init() {
-  apiCalls = {
-    url: "https://jsonplaceholder.typicode.com/posts/1",
-    childrenURLs: [
-      {
-        url:
-          "https://jsonplaceholder.typicode.com/comments?postId=${id}&id=${id}"
-      },
-      {
-        url:
-          "https://jsonplaceholder.typicode.com/comments?postId=${id}&id=${id}"
-      }
-    ]
-  };
+async function init(apiCalls) {
+  // apiCalls = {
+  //   url: "https://jsonplaceholder.typicode.com/posts/1",
+  //   childrenURLs: [
+  //     {
+  //       url:
+  //         "https://jsonplaceholder.typicode.com/comments?postId=${id}&id=${id}"
+  //     },
+  //     {
+  //       url:
+  //         "https://jsonplaceholder.typicode.com/comments?postId=${id}&id=${id}"
+  //     }
+  //   ]
+  // };
   let promiseAll = [];
 
   for (let instances = 1; instances <= 1; instances++) {

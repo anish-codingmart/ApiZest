@@ -1,0 +1,37 @@
+{
+	"input": {
+		"method": "GET",
+		"url": "http://localhost:3000/first",
+		"queryData": {
+			"type": "query",
+			"data": "id=123"
+		},
+		"children": [{
+			"method": "GET",
+			"url": "http://localhost:3000/second",
+			"queryData": {
+				"type": "param",
+				"data": "id={[0].id}"
+			},
+			"children": [{
+				"queryData": {
+					"type": "form",
+					"data": "id={[1].id}"
+				},
+				"method": "POST",
+				"url": "http://localhost:3000/third",
+				"children": []
+			}]
+		}, {
+			"queryData": "",
+			"method": "GET",
+			"url": "http://google1.com",
+			"children": [{
+				"queryData": "",
+				"method": "GET",
+				"url": "http://google.com",
+				"children": []
+			}]
+		}]
+	}
+}

@@ -1,0 +1,75 @@
+<style>
+.row{
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+</style>
+<div className='row' style='
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+'>
+   <div className='input-box col-md-12' style='  padding: 2% 20%;
+  text-align: center; position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;'>
+      <input className='form-control' name='title' id='title' type='text' placeholder='Enter the Request ID' /> <br /> 
+      <div className='row' style='
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+'>
+         <div className='col-2' style='    -ms-flex: 0 0 16.666667%;
+    flex: 0 0 16.666667%;
+    max-width: 16.666667%;
+}'>
+            <select class='custom-select' name='method' type='text' id='method'> 
+               <option selected>Method</option>
+               <option value='GET'>GET</option>
+               <option value='POST'>POST</option>
+            </select>
+         </div>
+         <div className='col-10' style='    -ms-flex: 0 0 83.333333%;
+    flex: 0 0 83.333333%;
+    max-width: 83.333333%'> <input className='form-control' name='url' id='url' type='url' placeholder='Enter the URL'  /> </div>
+      </div>
+      <br /> 
+      <div className='row' style='
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+'>
+         <div className='col-2' style='    -ms-flex: 0 0 16.666667%;
+    flex: 0 0 16.666667%;
+    max-width: 16.666667%;
+}'>
+            <select class='custom-select' name='queryDataType' type='text' id='queryDataType' > 
+               <option selected>Type</option>
+               <option value='query'>query</option>
+               <option value='param'>param</option>
+               <option value='form'>form</option>
+            </select>
+         </div>
+         <div className='col-10' style='    -ms-flex: 0 0 83.333333%;
+    flex: 0 0 83.333333%;
+    max-width: 83.333333%'> <input className='form-control' name='queryData' id='queryData' type='url' placeholder='Enter the Query Data' /> </div>
+      </div>
+      <br /> 
+      <div className='col-12'> <button className='btn btn-primary'>Submit</button> </div>
+   </div>
+</div>
