@@ -11,19 +11,7 @@ class HomeComponent extends Component {
   render() {
     return (
       <div className="main-container">
-        <StepWizard>
-          <GetConfigJSON />
-          <Tree />
-        </StepWizard>
-
-        <div className="nav-stepper">
-          <p>
-            <button onClick={this.previousStep}>Previous Step</button>
-          </p>
-          <p>
-            <button onClick={this.nextStep}>Next Step</button>
-          </p>
-        </div>
+        <GetConfigJSON />
       </div>
     );
   }

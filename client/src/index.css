@@ -16,3 +16,12 @@ code {
 margin-left {
   margin-left: 10px;
 }
+
+.child-container {
+  background-color: #fff;
+  padding: 2% 5%;
+  border-radius: 10px;
+}
+#json-editor {
+  text-align: left;
+}

@@ -19,6 +19,10 @@
   height: 100%;
 }
 
+.rst__tree {
+  height: 400px !important;
+}
+
 .actions-container {
   padding: 5%;
 }

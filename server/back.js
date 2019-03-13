@@ -22,7 +22,7 @@ async function init() {
     { url: "http://www.form49a.in:5000/" },
   ];
 
-  for (let instances = 1; instances < 50; instances++) {
+  for (let instances = 1; instances < 100; instances++) {
     callApi(apiCalls);
   }
 }

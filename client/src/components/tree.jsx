@@ -17,7 +17,7 @@ const uuidv1 = require("uuid/v1");
 class Tree extends Component {
   constructor(props) {
     super(props);
-
+    console.log(this.props.configJSON);
     this.state = {
       show: false,
       childData: {
@@ -28,71 +28,7 @@ class Tree extends Component {
         queryData: {},
         prevNodeId: ""
       },
-      treeData: [
-        {
-          method: "GET",
-          title: "1",
-          id: uuidv1(),
-          url: "http://localhost:3001/first",
-          queryData: {
-            type: "query",
-            data: "id=123"
-          },
-          children: [
-            {
-              method: "GET",
-              title: "2",
-              id: uuidv1(),
-              url: "http://localhost:3001/second",
-              queryData: {
-                type: "param",
-                data: "id={[0].id}"
-              },
-              children: [
-                {
-                  title: "3",
-                  id: uuidv1(),
-                  queryData: {
-                    type: "form",
-                    data: "id={[1].id}"
-                  },
-                  method: "POST",
-                  url: "http://localhost:3001/third",
-                  children: [
-                    {
-                      title: "3",
-                      id: uuidv1(),
-                      queryData: {
-                        type: "form",
-                        data: "id={[1].id}"
-                      },
-                      method: "POST",
-                      url: "http://localhost:3001/third"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              title: "2a",
-              id: uuidv1(),
-              queryData: {},
-              method: "GET",
-              url: "http://google.com",
-              children: [
-                {
-                  title: "3a",
-                  id: uuidv1(),
-                  queryData: {},
-                  method: "GET",
-                  url: "http://google1.com",
-                  children: []
-                }
-              ]
-            }
-          ]
-        }
-      ]
+      treeData: this.props.configJSON
     };
   }
 
@@ -136,14 +72,11 @@ class Tree extends Component {
 
   render() {
     return (
-      <div className="tree-container">
+      <div className="tree-container child-container">
         {this.renderModal()}
-        <div className="actions-container">
-          <button onClick={() => this.generate()} className="btn btn-dark">
-            Generate
-          </button>
-        </div>
         <div className="tree-container">
+          <h4>Tree Config</h4>
+          <hr />
           <SortableTree
             treeData={this.state.treeData}
             onChange={treeData => this.setState({ treeData })}
